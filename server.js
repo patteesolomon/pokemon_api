@@ -13,13 +13,13 @@ app.get('/', (req, res) => {
 
 app.get('/pokemon', (req, res) => {
     res.render("Index", {
-        pokemon:pokemon
+        pokemons : pokemon
     });
 });
 
 app.get('/pokemon/:id', (req, res) => {
-    res.render('Show', {pokemon: pokemon[req.params.id]} );
-});
+    res.render('Show', {pokemons : pokemon[req.params.id]} );
+})
 
 app.listen(port, () => {
     console.log('listening on ' + port);
